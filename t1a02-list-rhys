@@ -1,1 +1,12 @@
-
+<h1>t1a02-list-rhys</h1>
+<table border=1><tr>
+<td><a href="happywhale.com">happywhale.com</a></td>
+<td><img src="mywhale.jpg"></td
+</tr></table>
+<ol>
+  <li>Humpback
+  <li>Killer
+  <li>Sperm
+  <li>Blue
+  <li>Bowhead
+<ol>
