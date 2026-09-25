@@ -18,11 +18,11 @@
   I do CSS inline inside the tag. It overpowers all other methods<br><br>
 
   <i>This is italic</i>
-  <i id="myB1" style="color:#00ff00; background-color:blue;">This is Italic with CSS background color and main color</i>
+  <i id='myB1' style="color:#00ff00; background-color:blue;">This is Italic with CSS background color and main color</i>
 
-  <input type=button value=Change onclick="{
-   // document.getElementbyId('myB1').style.color = 'red'
-  //  document.getElementbyId('myB1').style.background-color = 'yellow'
+  <input type=button value=Change onClick="{
+    document.getElementbyId('myB1').style.color = 'red'
+    document.getElementbyId('myB1').style.background-color = 'yellow'
     alert();
   }"><br><br>
 
