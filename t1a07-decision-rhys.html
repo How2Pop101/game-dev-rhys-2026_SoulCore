@@ -35,9 +35,9 @@ Note: ! = Not, && = AND, || = OR
 <input type=button value="Complex if" onclick="{
   let myIn01 = parseFloat(document.getElementById('myNum01').value)
   if ((myIn01 !=3 || myIn01 > -3) && myIn01 <=100){
-    document.getElementbyId('myDiv01').innerHTML = myIn01 + ' is complex'
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' is complex'
   } else {
-    document.getElementbyId('myDiv01').innerHTML = myIn01 + ' is not complex'
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'
   }
 }">
 
