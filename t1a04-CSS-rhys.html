@@ -6,7 +6,7 @@
   for (let n = 0; n < size; n++) {
     result.push(hexRef[Math.floor(Math.random() * 16)]);
   }
-  return result.join('RandInt');
+  return result.join('');
 }
 </script>
 <body>
@@ -32,10 +32,11 @@
   <i id='myB1' style="color:#00ff00; background-color:blue;">This is Italic with CSS background color and main color</i>
 
   <input type=button value=Change onClick="{
-    getRanHex(6)
-    document.getElementById('myB1').style.color = '#' + RandInt;
-    getRanHex(6)
-    document.getElementById('myB1').style.backgroundColor = '#' + RandInt;
+    x = getRanHex(6)
+    y = getRanHex(6)
+    document.getElementById('myB1').style.color = '#' + x;
+    
+    document.getElementById('myB1').style.backgroundColor = '#' + y;
 
   }"><br><br>
 
