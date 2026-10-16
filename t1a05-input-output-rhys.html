@@ -31,19 +31,19 @@
   <input type=button value="+" onClick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myIn02 = parseFloat(document.getElementById('myNum02').value)
-    let myAnswer = myIn01 + myIn02
+    let myAnswer = myIn01 += myIn02
     document.getElementById('myDiv01').innerHTML = myIn01 + ' plus ' + myIn02 ' = ' myAnswer
   }">
   <input type=button value="-" onClick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myIn02 = parseFloat(document.getElementById('myNum02').value)
-    let myAnswer = myIn01 - myIn02
+    let myAnswer = myIn01 -= myIn02
     document.getElementById('myDiv01').innerHTML = myIn01 + ' minus ' + myIn02 ' = ' myAnswer
   }"><br>
   <input type=button value="Try to guess!" onClick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myIn02 = parseFloat(document.getElementById('myNum02').value)
-    let myAnswer = myIn01 + myIn02 + myIn02 + myIn02 
+    let myAnswer = myIn01 += myIn02 += myIn02 += myIn02 
     document.getElementById('myDiv01').innerHTML ='??? = ' + myAnswer
   }"><br><br>
   <input type=button value="Blue" onClick="{
