@@ -24,24 +24,24 @@
 
  <input type=button value="In02^2" onClick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
-    let myAnswer = myIn01 * myIn01
-    document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
+    let myAnswer = myIn02 * myIn02
+    document.getElementById('myDiv01').innerHTML = myIn02 + ' squared = ' + myAnswer
   }"><br>
 
   <input type=button value="+" onClick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myAnswer = myIn01 + myIn02
-    document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' + ' + myIn02 ' = ' myAnswer
   }">
   <input type=button value="-" onClick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myAnswer = myIn01 - myIn02
-    document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' - ' + myIn02 ' = ' myAnswer
   }"><br>
   <input type=button value="Try to guess!" onClick="{
     let myIn01 = parseFloat(document.getElementById('myNum01').value)
     let myAnswer = myIn01 + myIn02 + myIn02 - myIn01
-    document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
+    document.getElementById('myDiv01').innerHTML ='??? = ' + myAnswer
   }"><br><br>
   <input type=button value="Blue" onClick="{
     document.getElementById('myDiv01').style.color = 'Blue'
