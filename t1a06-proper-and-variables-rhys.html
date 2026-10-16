@@ -14,7 +14,8 @@
       myBool = document.getElementById('bool').value;
       myOut = document.getElementById('myDiv01');
       myOut.innerHTML = myNum + myString + myFloat + ', ' + myBool;
-      if (myBool) {myOut.innerHTML += ', WOW';}
+      if (document.getElementById('bool').value <= 5) {myOut.innerHTML += ', Did we do something wrong?';}
+      else {myOut.innerHTML += ', Thank you!';}
     }
   </script>
 </head>
