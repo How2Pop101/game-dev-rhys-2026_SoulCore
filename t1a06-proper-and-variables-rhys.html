@@ -8,10 +8,10 @@
   </style>
   <script>
     function sayHello() {
-      myNum= 3;
-      myString = ' Hello ';
-      myFloat = 17.5;
-      myBool = true;
+      myNum= getElementById('num').value
+      myString = getElementById('string').value;
+      myFloat = getElementById('float').value;
+      myBool = getElementById('bool').value;
       myOut = document.getElementById('myDiv01');
       myOut.innerHTML = myNum + myString + myFloat + ', ' + myBool;
       if (myBool) {myOut.innerHTML += ', WOW';}
@@ -22,8 +22,8 @@
   <p>This is <b>bold</b> text</p>
   <input id='num' type=number value = '3'>
   <input id='string' type=string value = ' Hello '>
-  <input id='float' type=float value = '17.5'>
-  <input id ='bool' type=boolean value=true>
+  <input id='float' type=number value = '17.5'>
+  <input id ='bool' type=checkbox value=true>
   <button onclick="sayHello()">Click Me</button>
   <div id='myDiv01'>...</div>
 </body>
