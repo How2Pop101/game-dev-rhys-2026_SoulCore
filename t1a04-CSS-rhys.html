@@ -2,12 +2,11 @@
   function getRanHex(size) {
   let result = [];
   let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
-
+  print()
   for (let n = 0; n < size; n++) {
     result.push(hexRef[Math.floor(Math.random() * 16)]);
-    print("Active")
   }
-  return result.join('');
+  return result.join('RandInt');
 }
 </script>
 <body>
@@ -34,9 +33,9 @@
 
   <input type=button value=Change onClick="{
     getRanHex(6)
-    document.getElementById('myB1').style.color = '#' + result;
+    document.getElementById('myB1').style.color = '#' + RandInt;
     getRanHex(6)
-    document.getElementById('myB1').style.backgroundColor = '#' + result;
+    document.getElementById('myB1').style.backgroundColor = '#' + RandInt;
 
   }"><br><br>
 
