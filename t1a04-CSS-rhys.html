@@ -5,6 +5,7 @@
 
   for (let n = 0; n < size; n++) {
     result.push(hexRef[Math.floor(Math.random() * 16)]);
+    print(Active)
   }
   return result.join('');
 }
@@ -32,8 +33,10 @@
   <i id='myB1' style="color:#00ff00; background-color:blue;">This is Italic with CSS background color and main color</i>
 
   <input type=button value=Change onClick="{
-    document.getElementById('myB1').style.color = '#' + 'genRanHex(6).result';
-    document.getElementById('myB1').style.backgroundColor = '#' + 'genRanHex(6).result';
+    genRanHex(6)
+    document.getElementById('myB1').style.color = '#' + result;
+    genRanHex(6)
+    document.getElementById('myB1').style.backgroundColor = '#' + result;
 
   }"><br><br>
 
