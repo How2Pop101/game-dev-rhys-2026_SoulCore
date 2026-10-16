@@ -1,5 +1,13 @@
 <script>
-  const genRanHex = size => [...Array(size)].map(() => Math.floor(Math.random() * 16).toString(16)).join('');
+  function getRanHex(size) {
+  let result = [];
+  let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+
+  for (let n = 0; n < size; n++) {
+    result.push(hexRef[Math.floor(Math.random() * 16)]);
+  }
+  return result.join('');
+}
 </script>
 <body>
   version 0.0.1<br>
@@ -24,8 +32,8 @@
   <i id='myB1' style="color:#00ff00; background-color:blue;">This is Italic with CSS background color and main color</i>
 
   <input type=button value=Change onClick="{
-    document.getElementById('myB1').style.color = '#' + 'genRanHex(6)';
-    document.getElementById('myB1').style.backgroundColor = '#' + 'genRanHex(6)';
+    document.getElementById('myB1').style.color = '#' + 'genRanHex(6).result';
+    document.getElementById('myB1').style.backgroundColor = '#' + 'genRanHex(6).result';
 
   }"><br><br>
 
