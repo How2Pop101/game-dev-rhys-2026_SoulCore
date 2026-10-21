@@ -1,0 +1,33 @@
+<script>
+
+  //using a script tage to make the class global
+  class myAnimal{
+    constructor(passName, passAge) {
+      this.myName = passName;
+      this.myAge = passAge;
+    }
+    myShow(){
+      document.getElementById('myDiv01').innerHTML = 'Hello, ' + this.myName+'.<br>'
+    }
+  } //end class myAnimal
+</script>
+
+<h2 align=center>t1a14-extend-class-rhys.html</h2>
+Extending a pre-exiting class<br>
+
+<h4>example working classes code</h4>
+
+<input type=button value="Example class set and show class animal" onClick="{
+  class myCat extends myAnimal {
+
+    myShow(){
+      document.getElementById('myDiv01').innerHTML = this.myname + ' is a great cat<br>'
+    }
+  } //end extended class myCat
+
+
+  ley myPet = new mycat('Fluffy', 14)
+  myPet.myShow()
+}">
+
+<div id="myDiv01">...</div>
