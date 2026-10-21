@@ -2,3 +2,31 @@
 <script>
   //what might be a good idea to declare here?
 </script>
+
+<a href="">Good reference to javascript ojects (you find one)</a><br>
+
+Objects are stored named variales
+
+
+<h4>Example working objects code</h4>
+
+Nothing: <input type=text id="myText01" value="useless at the moment"><br>
+
+
+<input type=button value='example object set and show' onClick="{
+
+  let myPerson = {
+    'firstName' : 'John',
+    'lastName" : 'Doe',
+    'age' : 50,
+    'eyeColor' : 'blue'
+  }
+
+      document.getElementById('myDiv01).innerHTML = '<br>myPerson Ojact has properties: <br>'
+      document.getElementById('myDiv01).innerHTML += 'firstName: ' + myPerson.firstname + '<br>'
+      document.getElementById('myDiv01).innerHTML += 'you do the others <br> '
+}">
+
+<div id="myDiv01">..</div>
+
+<b>Lets talk local and global variables, why might it be best to declare the object in the script tag?</b><br>
