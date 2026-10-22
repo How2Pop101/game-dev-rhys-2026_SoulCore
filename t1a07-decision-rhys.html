@@ -39,6 +39,15 @@ Note: ! = Not, && = AND, || = OR
   } else {
     document.getElementById('myDiv01').innerHTML = myIn01 + ' is not complex'
   }
+}"><br>
+Is it divisible by this? <input id='myNum02' type=number value="4">
+<input type=button value="Simple if Statement for Descision Making" onclick="{
+  let myIn01 = parseFloat(document.getElementById('myNum01').value)
+  let myIn02 = parseFloat(document.getElementById('myNum02').value)
+  if (myIn01 %% myIn02){
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' is divisible by ' + myIn02}
+  else{
+    document.getElementById('myDiv01').innerHTML = myIn01 + ' is not divisible by ' + myIn02
+  }
 }">
-
 <div id="myDiv01">...</div>
