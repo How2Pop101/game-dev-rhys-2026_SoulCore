@@ -32,8 +32,8 @@ weird number: <input id="myWeird" type=number value="4"<br>
 <input type=button value="even number identifier" onclick ="{
   document.getElementById('myDiv01').innerHTML = ''
   let myTemp = ''
-  let myMin = parseInt(document.getElementById('myNum01').value)
-  let myMax = parseInt(document.getElementById('myWeird').value)
+  let myMin = parseInt(document.getElementById('myWeird').value)
+  let myMax = parseInt(document.getElementById('myNum01').value)
 
   for (let myLoop = myMin; myLoop < myMax; myLoop++){
     if (myLoop % 2 == 0){
@@ -52,7 +52,7 @@ factorable number: <input id="myNum02" type=number value="4"><br>
   let myNum = parseInt(document.getElementById('myNum02').value)
 
   for (let myLoop = 0; myLoop <= myNum/2; myLoop++){
-    if (myNum % myLoop == 0){
+    if (myNum / myLoop %= 0){
       myTemp += myLoop += ', '
     }
   }
