@@ -7,13 +7,13 @@ function myExampleFunction(){
   return myReply
 }
 function subtract(){
-  let myIn01 = parseInt(document.getElementById('num01').value)
+  let myIn01 = parseInt(document.getElementById('myNum01').value)
   let mySum = myIn01 - myIn01
   let myReply = myIn01 + ' - ' + myIn01 + ' = ' + mySum
   return myReply
 }
 function fill(){
-  let myIn01 = parseInt(document.getElementById('num01').value)
+  let myIn01 = parseInt(document.getElementById('myNum01').value)
   return myIn01
 }
 </script>
@@ -32,10 +32,10 @@ Information can also be passed to functions (that's more advanced).
   document.getElementById('myDiv01').innerHTML = myExampleFunction()
   }"><br>
 
-<input id = num01 type=number value="4"><br>
+<input id = myNum01 type=number value="4"><br>
 <input type=button value="function Example" onClick="{
-  let num01 = document.getElementById('num01').value
-  if num01 <= 6{
+  let num = document.getElementById('myNum01').value
+  if num <= 6{
     document.getElementById('myDiv01').innerHTML = fill()
     document.getElementById('myDiv02').innerHTML = fill()
     document.getElementById('myDiv03').innerHTML = fill()
