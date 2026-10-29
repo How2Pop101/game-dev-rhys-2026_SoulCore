@@ -1,15 +1,28 @@
+<script>
+    function getRanHex(size) {
+  let result = [];
+  let hexRef = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+
+  for (let n = 0; n < size; n++) {
+    result.push(hexRef[Math.floor(Math.random() * 16)]);
+  }
+  return result.join('');
+</script>
 <h2 align=center>t1a10-Events-Rhys.html</h2>
 
 <a href="">Good reference to HTML Events</a><br>
 
 Events are HTML code that activates Javascript code.
 
-<input type=text id="myText01" value="3"><br>
+<input type=number id="myText01" value="3" onChange="{
+  document.getElementById(myDiv01).style.color = '#' + getRanHex(6)
+}><br>
 
-<input type=button value'Example onClick" onClick="{
-  document.getElementById('myDiv01').innerHTML =
-  document.getElementById('myText01').value
-}">
+<input type=button value='Example onClick' onClick="{
+  document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+}"onDBClick="{
+  document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value + document.getElementById('myText01').value
+}"> Can be double clicked!
 
 <div id ="myDiv01">...</div>
 
@@ -17,7 +30,13 @@ Events are HTML code that activates Javascript code.
   document.getElementById('myB02').innerHTML = 'this is nice'
 }" onMouseOver= "{
   document.getElementById('myB02').innerHTML = 'this is cool'
-}"> This is bold</b><br><br>
+}" onBlur= "{
+  document.getElementById('myB02').innerHTML = 'don't leave me D:'
+}" onFocus= "{
+  document.getElementById('myB02').innerHTML = 'You're Back!!! :D'
+}" onKeyPress= "{
+  document.getElementById('myB02').innerHTML = 'Whatcha Typin?'>
+}">This is bold</b><br><br>
 
 You do at least 8 other Events:<br>
-onClick, onDBClick, on Change, onBlur, onFocus, onMouseMove, onTouch, onKeyDown, onKeyPress, onDrageStart, onTouchStart, onTouchEnd, onTouchMove
+onClick, onDBClick, onChange, onBlur, onFocus, onMouseMove, onTouch, onKeyDown, onKeyPress, onDrageStart, onTouchStart, onTouchEnd, onTouchMove
