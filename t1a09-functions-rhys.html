@@ -30,8 +30,9 @@ Information can also be passed to functions (that's more advanced).
 
 <input type=button value="function Example" onClick="{
   document.getElementById('myDiv01').innerHTML = myExampleFunction()
-  }">
-<input id = num01 type=number value="4">
+  }"><br>
+
+<input id = num01 type=number value="4"><br>
 <input type=button value="function Example" onClick="{
   let num01 = document.getElementById('num01').value
   if num01 <= 6{
@@ -43,7 +44,8 @@ Information can also be passed to functions (that's more advanced).
     document.getElementById('myDiv06').innerHTML = fill()
   }else{
     document.getElementByID('myDiv02').innerHTML = subtract()
-    }">
+  }
+    }"><br>
 
 <div id="myDiv01">...</div>
 <div id="myDiv02"></div>
