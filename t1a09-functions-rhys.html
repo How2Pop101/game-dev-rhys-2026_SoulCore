@@ -35,7 +35,7 @@ Information can also be passed to functions (that's more advanced).
 <input id = myNum01 type=number value="4"><br>
 <input type=button value="function Example" onClick="{
   
-  if document.getElementById('myNum01').value <= 6{
+  if(document.getElementById('myNum01').value) <= 6{
     document.getElementById('myDiv01').innerHTML = fill()
     document.getElementById('myDiv02').innerHTML = fill()
     document.getElementById('myDiv03').innerHTML = fill()
