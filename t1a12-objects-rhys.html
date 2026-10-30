@@ -19,7 +19,9 @@ Nothing: <input type=text id="myText01" value="useless at the moment"><br>
 
 
 <input type=button value="Example Object Set and Show" onClick="{
-
+function reset(){
+  document.getElementById('button').value = 'create!'  
+}
   
 
     document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
@@ -51,6 +53,5 @@ Eye Color<input type=text id='ecText' value='blue'><br>
   myPerson.eyeColor  = document.getElementById('fnText').value
 
   document.getElementById('button').value = 'Successfully Created!'
-  setTimeout(3000)
-  document.getElementById('button').value = 'create!'
+  setTimeout(reset(), 3000)
 }">
