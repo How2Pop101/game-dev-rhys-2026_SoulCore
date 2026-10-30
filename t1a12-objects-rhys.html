@@ -48,9 +48,9 @@ Age:<input type=number id='ageNum' value='50'><br>
 Eye Color<input type=text id='ecText' value='blue'><br>
 <input type=button id='button' value=create! onClick="{
   myPerson.firstName = document.getElementById('fnText').value
-  myPerson.lastName = document.getElementById('fnText').value
-  myPerson.age = document.getElementById('fnText').value
-  myPerson.eyeColor  = document.getElementById('fnText').value
+  myPerson.lastName = document.getElementById('lnText').value
+  myPerson.age = document.getElementById('ageNum').value
+  myPerson.eyeColor  = document.getElementById('ecText').value
 
   document.getElementById('button').value = 'Successfully Created!'
   setTimeout(reset, 3000)
