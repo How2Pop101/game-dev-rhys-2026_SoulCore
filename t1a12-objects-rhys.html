@@ -19,9 +19,7 @@ Nothing: <input type=text id="myText01" value="useless at the moment"><br>
 
 
 <input type=button value="Example Object Set and Show" onClick="{
-function reset(){
-  document.getElementById('button').value = 'create!'  
-}
+
   
 
     document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
@@ -47,6 +45,9 @@ Last Name:<input type=text id='lnText' value='Doe'><br>
 Age:<input type=number id='ageNum' value='50'><br>
 Eye Color<input type=text id='ecText' value='blue'><br>
 <input type=button id='button' value=create! onClick="{
+  function reset(){
+  document.getElementById('button').value = 'create!'  
+  }
   myPerson.firstName = document.getElementById('fnText').value
   myPerson.lastName = document.getElementById('lnText').value
   myPerson.age = document.getElementById('ageNum').value
