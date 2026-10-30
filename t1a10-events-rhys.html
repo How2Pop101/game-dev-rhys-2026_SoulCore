@@ -17,7 +17,9 @@ Events are HTML code that activates Javascript code.
 
 <input type=number id="myText01" value="3" onChange="{
   document.getElementById(myDiv01).style.color = '#' + getRanHex(6)
-}><br>
+}" onKeyPress= "{
+  document.getElementById('myB02').innerHTML = 'Whatcha Typin?'>
+}"><br>
 
 <input type=button value='Example onClick' onClick="{
   document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
@@ -35,8 +37,6 @@ Events are HTML code that activates Javascript code.
   document.getElementById('myB02').innerHTML = 'don't leave me D:'
 }" onFocus= "{
   document.getElementById('myB02').innerHTML = 'You're Back!!! :D'
-}" onKeyPress= "{
-  document.getElementById('myB02').innerHTML = 'Whatcha Typin?'>
 }">This is bold</b><br><br>
 
 You do at least 8 other Events:<br>
