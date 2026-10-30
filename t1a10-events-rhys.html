@@ -16,18 +16,20 @@
 Events are HTML code that activates Javascript code.
 
 <input type=number id="myText01" value="3" onChange="{
-  document.getElementById('myDiv01').style.color = '#' + getRanHex(6)
+  document.getElementById('myDiv02').style.color = '#' + getRanHex(6)
 }" onKeyPress= "{
   document.getElementById('myB02').innerHTML = 'Whatcha Typin?'
 }"><br>
 
 <input type=button value='Example onClick' onClick="{
   document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
-}"onDBClick="{
-  document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value + document.getElementById('myText01').value
+}" 
+<input type=button value='Example onDBClick' onDBClick="{
+    document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value + document.getElementById('myText01').value
 }"> Can be double clicked!
 
 <div id ="myDiv01">...</div>
+<div id ="myDiv02">I can change color!!!!</div>
 
 <b id="myB02" onMouseOut="{
   document.getElementById('myB02').innerHTML = 'this is nice'
