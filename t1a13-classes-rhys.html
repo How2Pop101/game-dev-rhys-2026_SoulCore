@@ -9,16 +9,16 @@ Age: <input type=number id="myNum01" value="5"><br>
 Species: <input type=text id="myText02" value="Dog"><br>
 Home City: <input type=text id="myText03" value="Mission"><br>
 <input type=button value="Example Class set and show class Animal" onClick="{
-  let name = document.getElementById('myText').value
-  let age = document.getElementById('myText').value
-  let species = document.getElementById('myText').value
-  let homeCity = document.getElementById('myText').value
+  let name = document.getElementById('myText01').value
+  let age = document.getElementById('myNum01').value
+  let species = document.getElementById('myText02').value
+  let homeCity = document.getElementById('myText03').value
   class myAnimal {
     constructor(passName, passAge, passSpecies, passCity) {
       this.myName = passName;
       this.myAge = passAge;
       this.mySpecies = passSpecies;
-      this.myCity = passCity
+      this.myCity = passCity;
     }
     myShow(){
       document.getElementById('myDiv01').innerHTML = 'Hello '+ this.myName + '. You are a ' + this.mySpecies +', '+ this.myAge + ' years old, and you live in ' + this.myCity '.<br>'
