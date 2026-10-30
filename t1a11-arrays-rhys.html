@@ -43,15 +43,15 @@ Max Array Entry: <input type=number
   myArray[8] = 'You got it!'
 
   if (myTemp <= 8){
-    document.getElementById('myDiv01').value = myArray[myTemp]
+    document.getElementById('myDiv01').innerHTML = myArray[myTemp]
   }else{
-    document.getElementById('myDiv01').value = 'Too high.'
+    document.getElementById('myDiv01').innerHTML = 'Too high.'
   }
   guessNo += 1
   if (myTemp == 8){
     guessNo = 0
   }
-  document.getElementById('myDiv02').value = 'Guesses: ' + guessNo
+  document.getElementById('myDiv02').innerHTML = 'Guesses: ' + guessNo
   
 }"><br>
 
