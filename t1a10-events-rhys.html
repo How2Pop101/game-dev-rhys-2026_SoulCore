@@ -19,6 +19,10 @@ Events are HTML code that activates Javascript code.
   document.getElementById('myDiv02').style.color = '#' + getRanHex(6)
 }" onKeyPress= "{
   document.getElementById('myB02').innerHTML = 'Whatcha Typin?'
+}" onBlur= "{
+  document.getElementById('myB02').innerHTML = 'Nice number ya got there... can I have it?'
+}" onFocus= "{
+  document.getElementById('myB02').innerHTML = 'Oh boy, new number time!'
 }"><br>
 
 <input type=button value='Example onClick' onClick="{
@@ -35,11 +39,7 @@ Events are HTML code that activates Javascript code.
   document.getElementById('myB02').innerHTML = 'this is nice'
 }" onMouseOver= "{
   document.getElementById('myB02').innerHTML = 'this is cool'
-}" onBlur= "{
-  document.getElementById('myB02').innerHTML = 'don't leave me D:'
-}" onFocus= "{
-  document.getElementById('myB02').innerHTML = 'You're Back!!! :D'
-}">This is bold</b><br><br>
+}">  This is bold</b><br><br>
 
 You do at least 8 other Events:<br>
 onClick, onDBClick, onChange, onBlur, onFocus, onMouseMove, onTouch, onKeyDown, onKeyPress, onDrageStart, onTouchStart, onTouchEnd, onTouchMove
