@@ -27,7 +27,7 @@
    let myGlobalX = 0
    let myClock
    let hit = new sound('audio/hit.mp3')
-   
+   let gameOver = false
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -55,7 +55,7 @@ function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
       hit.play()
       setTimeout(loss, 3600)
-      
+      gameOver = true
          // go to your next level
    }
 
@@ -85,8 +85,9 @@ function myCheckHit(){
 
 
 <input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
+   if(gameOver==false){
+     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+     myCheckHit()}     // checks for all collisions
 }"><br><br>
 
 
