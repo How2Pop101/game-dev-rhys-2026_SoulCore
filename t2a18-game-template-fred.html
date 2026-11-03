@@ -27,7 +27,7 @@
    let myGlobalX = 0
    let myClock
    let hit = new sound('audio/hit.mp3')
-
+   
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -45,13 +45,15 @@ function myHitOther(my1,my2){
        return true
    }
 }
-
+function loss(){
+   alert('you lose')
+}
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
       hit.play()
-      setTimeout(hit.stop, 3600)
-      alert('you lose')
+      setTimeout(loss, 3600)
+      
        document.getElementById('myImg01').style.left = '20px'
        location = 'index.html'  // go to your next level
    }
