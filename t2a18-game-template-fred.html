@@ -57,7 +57,7 @@ function myCheckHit(){
       hit.play()
       setTimeout(loss, 3600)
       gameOver = true
-      for (document.getElementById('myImg01').style.height >= 0px){
+      while (document.getElementById('myImg01').style.height >= 0px){
          document.getElementById('myImg01').style.height -= 1px
          sleep(0.045)
       }
