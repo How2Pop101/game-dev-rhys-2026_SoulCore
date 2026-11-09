@@ -7,6 +7,16 @@
 <br><br><br><br>
 
 <script>
+   function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+   async function demo() {
+    for (document.getElementById('myImg01').style.height >= 0){
+         document.getElementById('myImg01').style.height -= 1
+        await sleep(45);
+    }
+    console.log('Done');
+}
 
    function sound(src) {
   this.sound = document.createElement("audio");
@@ -57,10 +67,7 @@ function myCheckHit(){
       hit.play()
       setTimeout(loss, 3600)
       gameOver = true
-      while (document.getElementById('myImg01').style.height >= 0){
-         document.getElementById('myImg01').style.height -= 1
-         sleep(0.045)
-      }
+      demo()
          // go to your next level
    }
 
