@@ -11,8 +11,8 @@
     return new Promise(resolve => setTimeout(resolve, ms));
 }
    async function demo() {
-    while(parseInt(document.getElementById('myImg01').style.height) >= 0) {
-         parseInt(document.getElementById('myImg01').style.height) -= 1;
+    while(parseInt(document.getElementById('myImg01').style.height) >= 0px) {
+         parseInt(document.getElementById('myImg01').style.height) -= 1px;
           console.log('reduced height by 1');
         await sleep(45);
     }
