@@ -1,7 +1,7 @@
 
 
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="Images/CutrScreen.png">
+<body id="myBody" style="background-repeat:repeat; background-size: 100%" background="Images/CutrScreen.png">
 
 <h1 align=center>t2a18-game-template-fred</h1>
 <br><br><br><br>
@@ -11,8 +11,8 @@
     return new Promise(resolve => setTimeout(resolve, ms));
 }
    async function demo() {
-    while(document.getElementById('myImg01').style.height >= 0) {
-         document.getElementById('myImg01').style.height -= 1;
+    while(parseInt(document.getElementById('myImg01').style.height) >= 0) {
+         parseInt(document.getElementById('myImg01').style.height) -= 1;
           console.log('reduced height by 1');
         await sleep(45);
     }
