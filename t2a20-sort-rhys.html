@@ -6,23 +6,23 @@
 </script>
 
 <input type=button value="Set Random" onclick="{
-  for(let myLoop = 0; myLoop < myMax; myLoop++){
-    myCards[myloop] = Math.floor(Math.random()*10)
+  for(let myLoop=0; myLoop < myMax; myLoop++){
+    myCards[myloop]=Math.floor(Math.random()*10)
   }
 }">
 
 <input type=button value="Show" onclick="{
-  let myTemp = ''
-  for(let myLoop = 0; myLoop < myMax; myLoop++){
+  let myTemp=''
+  for(let myLoop=0; myLoop < myMax; myLoop++){
     myTemp += myLoop + ' = '+ myCards[myloop] + '<br>'
   }
   document.getElementById('myDiv01').innerHTML = myTemp
 }">
 
 <input type=button value="Show" onclick="{
-  let myTemp = 0
-  for(let myLoop = 0; myLoop < myMax; myLoop++){
-    myCards[myloop] = 0 // you do thsi stuff
+  let myTemp=0
+  for(let myLoop=0; myLoop < myMax; myLoop++){
+    myCards[myloop]=0 // you do thsi stuff
   }
 }">
 
