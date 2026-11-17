@@ -6,14 +6,14 @@
 </script>
 
 <input type=button value="Set Random" onclick="{
-  for(let myLoop=0; myLoop < myMax; myLoop++){
+  for(let myLoop=1; myLoop <= myMax; myLoop++){
     myCards[myLoop]=Math.floor((Math.random()*10)+1)
   }
 }">
 <br>
 <input type=button value="Show" onclick="{
   let myTemp=''
-  for(let myLoop=0; myLoop < myMax; myLoop++){
+  for(let myLoop=1; myLoop <= myMax; myLoop++){
     myTemp += myLoop + ' = '+ myCards[myLoop] + '<br>'
   }
   document.getElementById('myDiv01').innerHTML = myTemp
@@ -21,7 +21,7 @@
 
 <input type=button value="Sort" onclick="{
   let myTemp=''
-  for(let myLoop=0; myLoop < 10; myLoop++){
+  for(let myLoop=1; myLoop <= 10; myLoop++){
     for(let loopTwo=1; loopTwo <= myMax; loopTwo++){
       if(myCards[loopTwo] == myLoop){
         myTemp += loopTwo + ' = '+ myCards[loopTwo] + '<br>'
