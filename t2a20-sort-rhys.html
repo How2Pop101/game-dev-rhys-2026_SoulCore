@@ -21,8 +21,8 @@
 
 <input type=button value="Sort" onclick="{
   let myTemp=''
-  for(let myLoop=1; myLoop <= 10; myLoop++){
-    for(let loopTwo=0; loopTwo < myMax; loopTwo++){
+  for(let myLoop=0; myLoop < 10; myLoop++){
+    for(let loopTwo=1; loopTwo <= myMax; loopTwo++){
       if(myCards[loopTwo] == myLoop){
         myTemp += loopTwo + ' = '+ myCards[loopTwo] + '<br>'
       }
