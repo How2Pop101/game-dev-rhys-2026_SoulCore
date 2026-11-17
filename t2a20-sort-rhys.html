@@ -5,9 +5,139 @@
   let myCards = new Array
 
   function reshuffle(){
-    for(let myLoop=1; myLoop <= myMax; myLoop++){
-    myCards[myLoop]=Math.floor((Math.random()*10)+1)
-  }
+    let one=0
+    let two=0
+    let three=0
+    let four=0
+    let five=0
+    let six=0
+    let seven=0
+    let eight=0
+    let nine=0
+    let ten=0
+    let eleven=0
+    let twelve=0
+    let thirteen=0
+    for(let myLoop=1; myLoop <= myMax;){
+      let myTemp = Math.floor((Math.random()*13)+1)
+      if (myTemp == 1){
+        if (one < 4){
+          myCards[myLoop]= myTemp;
+          one += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 2){
+        if (two < 4){
+          myCards[myLoop]= myTemp;
+          two += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 3){
+        if (three < 4){
+          myCards[myLoop]= myTemp;
+          three += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 4){
+        if (four < 4){
+          myCards[myLoop]= myTemp;
+          four += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 5){
+        if (five < 4){
+          myCards[myLoop]= myTemp;
+          five += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 6){
+        if (six < 4){
+          myCards[myLoop]= myTemp;
+          six += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 7){
+        if (seven < 4){
+          myCards[myLoop]= myTemp;
+          seven += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 8){
+        if (eight < 4){
+          myCards[myLoop]= myTemp;
+          oneeight += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 9){
+        if (nine < 4){
+          myCards[myLoop]= myTemp;
+          nine += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 10){
+        if (ten < 4){
+          myCards[myLoop]= myTemp;
+          ten += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 11){
+        if (eleven < 4){
+          myCards[myLoop]= myTemp;
+          eleven += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 12){
+        if (twelve < 4){
+          myCards[myLoop]= myTemp;
+          twelve += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+      if (myTemp == 13){
+        if (thirteen < 4){
+          myCards[myLoop]= myTemp;
+          thirteen += 1;
+          myLoop++;
+        }else{
+          myTemp = Math.floor((Math.random()*13)+1)
+        }
+      }
+    }
   }
 </script>
 <body onload="reshuffle()">
@@ -26,7 +156,7 @@
 
 <input type=button value="Sort" onclick="{
   let myTemp=''
-  for(let myLoop=1; myLoop <= 10; myLoop++){
+  for(let myLoop=1; myLoop <= 13; myLoop++){
     for(let loopTwo=1; loopTwo <= myMax; loopTwo++){
       if(myCards[loopTwo] == myLoop){
         myTemp += loopTwo + ' = '+ myCards[loopTwo] + '<br>'
@@ -49,6 +179,9 @@
   let eight=0
   let nine=0
   let ten=0
+  let eleven=0
+  let twelve=0
+  let thirteen=0
   
   for(let myLoop=0; myLoop < myMax; myLoop++){
     if (myCards[myLoop] == 1){
@@ -81,6 +214,15 @@
     if (myCards[myLoop] == 10){
       ten += 1
     }
+    if (myCards[myLoop] == 11){
+      eleven += 1
+    }
+    if (myCards[myLoop] == 12){
+      twelve += 1
+    }
+    if (myCards[myLoop] == 13){
+      thirteen += 1
+    }
   }
   document.getElementById('myDiv01').innerHTML = ''
   document.getElementById('myDiv01').innerHTML +='Ones: '+ one +'<br>'
@@ -93,6 +235,9 @@
   document.getElementById('myDiv01').innerHTML +='Eights: '+ eight +'<br>'
   document.getElementById('myDiv01').innerHTML +='Nines: '+ nine +'<br>'
   document.getElementById('myDiv01').innerHTML +='Tens: '+ ten +'<br>'
+  document.getElementById('myDiv01').innerHTML +='Eleven: '+ eleven +'<br>'
+  document.getElementById('myDiv01').innerHTML +='Twelves: '+ twelve +'<br>'
+  document.getElementById('myDiv01').innerHTML +='Thirteens: '+ thirteen +'<br>'
 }">
 <br><br>
 <input type=button value="Pick a Card..." onclick="{
