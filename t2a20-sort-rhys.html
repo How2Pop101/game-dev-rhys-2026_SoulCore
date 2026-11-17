@@ -3,12 +3,16 @@
 <script>
   let myMax = 52 //52 when working
   let myCards = new Array
+
+  function reshuffle(){
+    for(let myLoop=1; myLoop <= myMax; myLoop++){
+    myCards[myLoop]=Math.floor((Math.random()*10)+1)
+  }
+  }
 </script>
 
 <input type=button value="Set Random" onclick="{
-  for(let myLoop=1; myLoop <= myMax; myLoop++){
-    myCards[myLoop]=Math.floor((Math.random()*10)+1)
-  }
+  reshuffle()
   document.getElementById('myDiv01').innerHTML = 'Reshuffling...'
 }">
 <br>
@@ -98,4 +102,4 @@
   document.getElementById('myDiv01').innerHTML = myTemp
 }">
 <input type=number value='9' id='myNum01'>
-<div id="myDiv01"></div>
+<div id="myDiv01">Shuffling...</div>
