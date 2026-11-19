@@ -1,6 +1,6 @@
 <h1 align=center>t2a21-spy-rhys.html</h1>
 <h2>Encryption 1</h2>
-<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea>
+<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br>
 
 <input type=button value="encrypt" onclick="{
   let myTemp = ''
@@ -36,11 +36,8 @@
     myString[myLoop] = myTemp
   }
   document.getElementById('myArea02').value = myString.join('')
-}"><br><br>
-
-<textarea id="myArea02" rows=4 cols=70></textarea><br>
-
-<inout type value="decrypt" onclick="{
+}"><br>
+<input type=button value="decrypt" onclick="{
   let myTemp = ''
   myString = document.getElementById('myArea01').value.toLowerCase().split('')
   for(let myLoop=0; myLoop < myString.length; myLoop++){
@@ -74,7 +71,10 @@
     myString[myLoop] = myTemp
   }
   document.getElementById('myArea02').value = myString.join('')
-}"><br><br>
+}"><br>
+<textarea id="myArea02" rows=4 cols=70></textarea>
+<br><br>
+
 <h2>Encryption 2</h2>
 <textarea id="myArea03" rows=4 cols=70></textarea><br>
   <input type=button value="encrypt" onclick="{
@@ -111,11 +111,9 @@
     myString[myLoop] = myTemp
   }
   document.getElementById('myArea02').value = myString.join('')
-}"><br><br>
+}">
 
-<textarea id="myArea04" rows=4 cols=70></textarea><br>
-
-<inout type value="decrypt" onclick="{
+<input type=button value="decrypt" onclick="{
   let myTemp = ''
   myString = document.getElementById('myArea01').value.toLowerCase().split('')
   for(let myLoop=0; myLoop < myString.length; myLoop++){
@@ -149,4 +147,8 @@
     myString[myLoop] = myTemp
   }
   document.getElementById('myArea02').value = myString.join('')
-}"><br><br>
+}"><br>
+
+
+<textarea id="myArea04" rows=4 cols=70></textarea><br>
+
