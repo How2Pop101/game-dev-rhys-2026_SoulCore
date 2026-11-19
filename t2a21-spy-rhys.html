@@ -1,6 +1,6 @@
 <h1 align=center>t2a21-spy-rhys.html</h1>
 <h2>Encryption 1</h2>
-<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br>
+<textarea id="myArea01" rows=4 cols=70 placeholder='Decrypted Text Goes here...'></textarea><br>
 
 <input type=button value="encrypt" onclick="{
   let myTemp = ''
@@ -39,7 +39,7 @@
 }"><br>
 <input type=button value="decrypt" onclick="{
   let myTemp = ''
-  myString = document.getElementById('myArea01').value.toLowerCase().split('')
+  myString = document.getElementById('myArea03').value.toLowerCase().split('')
   for(let myLoop=0; myLoop < myString.length; myLoop++){
     myTemp = myString[myLoop]
     if (myString[myLoop] == 'a') {myTemp = 'z'}
@@ -70,13 +70,13 @@
     if (myString[myLoop] == 'z') {myTemp = 'y'}
     myString[myLoop] = myTemp
   }
-  document.getElementById('myArea02').value = myString.join('')
+  document.getElementById('myArea04').value = myString.join('')
 }"><br>
-<textarea id="myArea02" rows=4 cols=70></textarea>
+<textarea id="myArea02" rows=4 cols=70 placeholder='Encrypted Text Goes here...'></textarea>
 <br><br>
 
 <h2>Encryption 2</h2>
-<textarea id="myArea03" rows=4 cols=70></textarea><br>
+<textarea id="myArea03" rows=4 cols=70 placeholder='Decrypted Text Goes here...'></textarea><br>
   <input type=button value="encrypt" onclick="{
   let myTemp = ''
   myString = document.getElementById('myArea01').value.toLowerCase().split('')
@@ -111,11 +111,11 @@
     myString[myLoop] = myTemp
   }
   document.getElementById('myArea02').value = myString.join('')
-}">
+}"><br>
 
 <input type=button value="decrypt" onclick="{
   let myTemp = ''
-  myString = document.getElementById('myArea01').value.toLowerCase().split('')
+  myString = document.getElementById('myArea04').value.toLowerCase().split('')
   for(let myLoop=0; myLoop < myString.length; myLoop++){
     myTemp = myString[myLoop]
     if (myString[myLoop] == 'a') {myTemp = 'p'}
@@ -146,9 +146,9 @@
     if (myString[myLoop] == 'z') {myTemp = 'o'}
     myString[myLoop] = myTemp
   }
-  document.getElementById('myArea02').value = myString.join('')
+  document.getElementById('myArea03').value = myString.join('')
 }"><br>
 
 
-<textarea id="myArea04" rows=4 cols=70></textarea><br>
+<textarea id="myArea04" rows=4 cols=70 placeholder='Encrypted Text Goes here...'></textarea><br>
 
