@@ -12,7 +12,7 @@ function theWorldRevolving(){
    let myTemp = '100px 0px'
    myClock = setInterval(function(){
    myGlobalX -= 1
-   let myY = myGlobalX * 2 
+   let myY = myGlobalX 
    myTemp =  myGlobalX + 'px ' + myY + 'px'
    document.getElementById('myBody').style.backgroundPosition = myTemp
    }, 100)
