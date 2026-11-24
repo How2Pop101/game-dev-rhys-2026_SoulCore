@@ -65,7 +65,7 @@ function loss(){
 }
 
 function myCheckHit(){
-   if ( myHitOther('hitbox01','myImg02') ){
+   if ( myHitOther('hitbox01','hitbox02') ){
       hit.play()
       setTimeout(loss, 3600)
       gameOver = true
@@ -83,7 +83,7 @@ function myCheckHit(){
 </script>
 //hitboxes
 <img id="hitbox01" style="position:absolute; width:100px; height:70px; top:270px; left:790px;" src="Images/Backgrounds/BG.png">
-<img id="hitbox02" style="position:absolute; width:100px; height:100px; top:50px; left:800px;" src="Images/Backgrounds/BG.png">
+<img id="hitbox02" style="position:absolute; width:100px; height:100px; top:25px; left:775px;" src="Images/Backgrounds/BG.png">
 
 //characters
 <img id="myImg01" style="position:absolute; width:150px; height:150px; top:200px; left:750px;"  src="Images/LawfulGood.png">
