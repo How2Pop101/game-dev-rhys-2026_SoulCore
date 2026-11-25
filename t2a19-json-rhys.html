@@ -7,9 +7,9 @@
     console.log(data);
 
     const myJson = JSON.stringify(data, null, 2);
-    document.getElementById('myDiv01').innerHTML = '<pre>${myJson}</pre>';
+    document.getElementById('myDiv01').innerHTML = `<pre>${myJson}</pre>`;
 
-    document.getElementById('myDiv01').innerHTML += '<img src="${data.image}" alt="random image" style="max-width: 100%; height: auto;">';}
+    document.getElementById('myDiv01').innerHTML += `<img src="${data.image}" alt="random image" style="max-width: 100%; height: auto;">`;}
 </script>
 
 <select id="mySelect" size="1" onchange="{fetchData(this.value)}">
