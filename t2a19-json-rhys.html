@@ -12,7 +12,7 @@
     document.getElementById('myDiv01').innerHTML += '<img src="${data.image}" alt="random image" style="maxwidth: 100%; height: auto;">';}
 </script>
 
-<select id="mySelect" size="1" onchange="fetchData(this.value)">
+<select id="mySelect" size="1" onchange="{fetchData(this.value)}">
   <option></option>
   <option value="https://randomfox.ca/floof/">randomfox</option>
 </select><br><br>
