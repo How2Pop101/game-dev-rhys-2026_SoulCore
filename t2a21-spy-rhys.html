@@ -152,3 +152,79 @@
 
 <textarea id="myArea04" rows=4 cols=70 placeholder='Encrypted Text Goes here...'></textarea><br>
 
+<h2>Encryption 2</h2>
+<textarea id="myArea05" rows=4 cols=70 placeholder='Decrypted Text Goes here...'></textarea><br>
+  <input type=button value="encrypt" onclick="{
+  let myTemp = ''
+  myString = document.getElementById('myArea01').value.toLowerCase().split('')
+  for(let myLoop=0; myLoop < myString.length; myLoop++){
+    myTemp = myString[myLoop]
+    if (myString[myLoop] == 'a') {myTemp = 'i'}
+    if (myString[myLoop] == 'b') {myTemp = 'h'}
+    if (myString[myLoop] == 'c') {myTemp = 'g'}
+    if (myString[myLoop] == 'd') {myTemp = 'f'}
+    if (myString[myLoop] == 'e') {myTemp = 'e'}
+    if (myString[myLoop] == 'f') {myTemp = 'd'}
+    if (myString[myLoop] == 'g') {myTemp = 'c'}
+    if (myString[myLoop] == 'h') {myTemp = 'b'}
+    if (myString[myLoop] == 'i') {myTemp = 'a'}
+    if (myString[myLoop] == 'j') {myTemp = 'z'}
+    if (myString[myLoop] == 'k') {myTemp = 'y'}
+    if (myString[myLoop] == 'l') {myTemp = 'x'}
+    if (myString[myLoop] == 'm') {myTemp = 'w'}
+    if (myString[myLoop] == 'n') {myTemp = 'v'}
+    if (myString[myLoop] == 'o') {myTemp = 'u'}
+    if (myString[myLoop] == 'p') {myTemp = 't'}
+    if (myString[myLoop] == 'q') {myTemp = 's'}
+    if (myString[myLoop] == 'r') {myTemp = 'r'}
+    if (myString[myLoop] == 's') {myTemp = 'q'}
+    if (myString[myLoop] == 't') {myTemp = 'p'}
+    if (myString[myLoop] == 'u') {myTemp = 'o'}
+    if (myString[myLoop] == 'v') {myTemp = 'n'}
+    if (myString[myLoop] == 'w') {myTemp = 'm'}
+    if (myString[myLoop] == 'x') {myTemp = 'l'}
+    if (myString[myLoop] == 'y') {myTemp = 'k'}
+    if (myString[myLoop] == 'z') {myTemp = 'j'}
+    myString[myLoop] = myTemp
+  }
+  document.getElementById('myArea06').value = myString.join('')
+}"><br>
+
+<input type=button value="decrypt" onclick="{
+  let myTemp = ''
+  myString = document.getElementById('myArea04').value.toLowerCase().split('')
+  for(let myLoop=0; myLoop < myString.length; myLoop++){
+    myTemp = myString[myLoop]
+    if (myString[myLoop] == 'a') {myTemp = 'i'}
+    if (myString[myLoop] == 'b') {myTemp = 'h'}
+    if (myString[myLoop] == 'c') {myTemp = 'g'}
+    if (myString[myLoop] == 'd') {myTemp = 'f'}
+    if (myString[myLoop] == 'e') {myTemp = 'e'}
+    if (myString[myLoop] == 'f') {myTemp = 'd'}
+    if (myString[myLoop] == 'g') {myTemp = 'c'}
+    if (myString[myLoop] == 'h') {myTemp = 'b'}
+    if (myString[myLoop] == 'i') {myTemp = 'a'}
+    if (myString[myLoop] == 'j') {myTemp = 'z'}
+    if (myString[myLoop] == 'k') {myTemp = 'y'}
+    if (myString[myLoop] == 'l') {myTemp = 'x'}
+    if (myString[myLoop] == 'm') {myTemp = 'w'}
+    if (myString[myLoop] == 'n') {myTemp = 'v'}
+    if (myString[myLoop] == 'o') {myTemp = 'u'}
+    if (myString[myLoop] == 'p') {myTemp = 't'}
+    if (myString[myLoop] == 'q') {myTemp = 's'}
+    if (myString[myLoop] == 'r') {myTemp = 'r'}
+    if (myString[myLoop] == 's') {myTemp = 'q'}
+    if (myString[myLoop] == 't') {myTemp = 'p'}
+    if (myString[myLoop] == 'u') {myTemp = 'o'}
+    if (myString[myLoop] == 'v') {myTemp = 'n'}
+    if (myString[myLoop] == 'w') {myTemp = 'm'}
+    if (myString[myLoop] == 'x') {myTemp = 'l'}
+    if (myString[myLoop] == 'y') {myTemp = 'k'}
+    if (myString[myLoop] == 'z') {myTemp = 'j'}
+    myString[myLoop] = myTemp
+  }
+  document.getElementById('myArea05').value = myString.join('')
+}"><br>
+
+
+<textarea id="myArea06" rows=4 cols=70 placeholder='Encrypted Text Goes here...'></textarea><br>
