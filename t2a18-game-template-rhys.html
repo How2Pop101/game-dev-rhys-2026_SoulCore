@@ -58,6 +58,46 @@ function myHitOther(my1,my2){
        return true
    }
 }
+
+window.addEventListener('keydown', function (e) {
+   myGameArea.keys = (myGameArea.keys || []);
+    myGameArea.keys[e.keyCode] = true;
+})
+window.addEventListener('keyup', function (e) {
+   myGameArea.keys[e.keyCode] = false;
+})
+
+function updateGameArea() {
+   if (myGameArea.keys && myGameArea.keys[37]) {
+         if(gameOver==false){
+     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
+     document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px'
+     myCheckHit()
+         }
+   }
+   if (myGameArea.keys && myGameArea.keys[39]) {
+         if(gameOver==false){
+     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
+     document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px'
+     myCheckHit()
+         }
+   }
+   if (myGameArea.keys && myGameArea.keys[38]) {
+         if(gameOver==false){
+      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speedB + 'px';
+      document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speedB + 'px';
+      myCheckHit();
+         }  
+   }
+   if (myGameArea.keys && myGameArea.keys[40]) {   
+      if(gameOver==false){
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speed + 'px'
+         document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speed + 'px'
+         myCheckHit()
+      }
+   }
+}
+   
 function loss(){
    alert('Tee hee, looks like i got ya!')
    location = 'index.html'
