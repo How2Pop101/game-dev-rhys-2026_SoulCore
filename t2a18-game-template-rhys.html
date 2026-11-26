@@ -68,28 +68,28 @@ window.addEventListener('keyup', function (e) {
 })
 
 function updateGameArea() {
-   if (myGameArea.keys && myGameArea.keys[37]) {
+   if (window.keys && window.keys[37]) {
          if(gameOver==false){
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
      document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px'
      myCheckHit()
          }
    }
-   if (myGameArea.keys && myGameArea.keys[39]) {
+   if (window.keys && window.keys[39]) {
          if(gameOver==false){
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
      document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px'
      myCheckHit()
          }
    }
-   if (myGameArea.keys && myGameArea.keys[38]) {
+   if (window.keys && window.keys[38]) {
          if(gameOver==false){
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speedB + 'px';
       document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speedB + 'px';
       myCheckHit();
          }  
    }
-   if (myGameArea.keys && myGameArea.keys[40]) {   
+   if (window.keys && window.keys[40]) {   
       if(gameOver==false){
          document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speed + 'px'
          document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speed + 'px'
