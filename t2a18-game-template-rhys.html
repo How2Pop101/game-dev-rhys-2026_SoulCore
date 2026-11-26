@@ -59,16 +59,16 @@ function myHitOther(my1,my2){
    }
 }
 
-document.addEventListener('keydown', function (e) {
-   window.keys = (window.keys || []);
-    window.keys[e.keyCode] = true;
+window.addEventListener('keydown', function (e) {
+   document.keys = (document.keys || []);
+    document.keys[e.keyCode] = true;
 })
-document.addEventListener('keyup', function (e) {
-   window.keys[e.keyCode] = false;
+window.addEventListener('keyup', function (e) {
+   document.keys[e.keyCode] = false;
 })
 
 function updateGameArea() {
-   if (window.keys && window.keys[37]) {
+   if (document.keys && document.keys[37]) {
          if(gameOver==false){
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px';
       document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px';
@@ -76,7 +76,7 @@ function updateGameArea() {
       console.log('left')
          }
    }
-   if (window.keys && window.keys[39]) {
+   if (document.keys && document.keys[39]) {
          if(gameOver==false){
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px';
       document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px';
@@ -84,7 +84,7 @@ function updateGameArea() {
       console.log('right')
          }
    }
-   if (window.keys && window.keys[38]) {
+   if (document.keys && document.keys[38]) {
          if(gameOver==false){
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speedB + 'px';
       document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speedB + 'px';
@@ -92,7 +92,7 @@ function updateGameArea() {
       console.log('up')
          }  
    }
-   if (window.keys && window.keys[40]) {   
+   if (document.keys && document.keys[40]) {   
       if(gameOver==false){
          document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speed + 'px'
          document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speed + 'px'
