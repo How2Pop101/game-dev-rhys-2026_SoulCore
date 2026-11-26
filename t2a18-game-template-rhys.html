@@ -70,16 +70,18 @@ window.addEventListener('keyup', function (e) {
 function updateGameArea() {
    if (window.keys && window.keys[37]) {
          if(gameOver==false){
-     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
-     document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px'
-     myCheckHit()
+      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px';
+      document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px';
+      myCheckHit();
+      console.log('left')
          }
    }
    if (window.keys && window.keys[39]) {
          if(gameOver==false){
-     document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
-     document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px'
-     myCheckHit()
+      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px';
+      document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px';
+      myCheckHit();
+      console.log('right')
          }
    }
    if (window.keys && window.keys[38]) {
@@ -87,13 +89,15 @@ function updateGameArea() {
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speedB + 'px';
       document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speedB + 'px';
       myCheckHit();
+      console.log('up')
          }  
    }
    if (window.keys && window.keys[40]) {   
       if(gameOver==false){
          document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speed + 'px'
          document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speed + 'px'
-         myCheckHit()
+         myCheckHit();
+         console.log('down')
       }
    }
 }
