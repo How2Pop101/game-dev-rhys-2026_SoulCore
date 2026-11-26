@@ -60,10 +60,9 @@ function myHitOther(my1,my2){
 }
 
 window.addEventListener('keydown', (event) => {
-    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
-});
+   const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
 
-switch (event.key) {
+   switch (event.key) {
     case "ArrowLeft":
         if(gameOver==false){
            document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
@@ -93,6 +92,9 @@ switch (event.key) {
       }
         break;
 }
+});
+
+
    
 function loss(){
    alert('Tee hee, looks like i got ya!')
