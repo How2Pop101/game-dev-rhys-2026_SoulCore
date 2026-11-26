@@ -60,7 +60,7 @@ function myHitOther(my1,my2){
 }
 
 window.addEventListener('keydown', function (e) {
-   window.keys = (myGameArea.keys || []);
+   window.keys = (window.keys || []);
     window.keys[e.keyCode] = true;
 })
 window.addEventListener('keyup', function (e) {
