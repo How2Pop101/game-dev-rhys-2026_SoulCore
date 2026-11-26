@@ -59,47 +59,39 @@ function myHitOther(my1,my2){
    }
 }
 
-window.addEventListener('keydown', function (e) {
-   document.keys = (document.keys || []);
-    document.keys[e.keyCode] = true;
-})
-window.addEventListener('keyup', function (e) {
-   document.keys[e.keyCode] = false;
-})
+node.addEventListener('keydown', (event) => {
+    const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+});
 
-function updateGameArea() {
-   if (document.keys && document.keys[37]) {
+switch (event.key) {
+    case "ArrowLeft":
+        if(gameOver==false){
+           document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px'
+           document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px'
+           myCheckHit()
+        }
+        break;
+    case "ArrowRight":
          if(gameOver==false){
-      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px';
-      document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px';
-      myCheckHit();
-      console.log('left')
+           document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speed + 'px'
+           document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speed + 'px'
+           myCheckHit()
          }
-   }
-   if (document.keys && document.keys[39]) {
-         if(gameOver==false){
-      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speedB + 'px';
-      document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speedB + 'px';
-      myCheckHit();
-      console.log('right')
-         }
-   }
-   if (document.keys && document.keys[38]) {
-         if(gameOver==false){
-      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speedB + 'px';
-      document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speedB + 'px';
-      myCheckHit();
-      console.log('up')
-         }  
-   }
-   if (document.keys && document.keys[40]) {   
+        break;
+    case "ArrowUp":
+      if(gameOver==false){
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speedB + 'px'
+         document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speedB + 'px'
+         myCheckHit()
+      }
+        break;
+    case "ArrowDown":
       if(gameOver==false){
          document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speed + 'px'
          document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speed + 'px'
-         myCheckHit();
-         console.log('down')
+         myCheckHit()
       }
-   }
+        break;
 }
    
 function loss(){
@@ -138,7 +130,8 @@ function myCheckHit(){
    if(gameOver==false){
      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speedB + 'px'
      document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speedB + 'px'
-     myCheckHit()}     // checks for all collisions
+     myCheckHit()
+   }     // checks for all collisions
 }"><br><br>
 
 <input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
@@ -152,14 +145,16 @@ function myCheckHit(){
    if(gameOver==false){
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + speed + 'px'
      document.getElementById('hitbox01').style.left = parseInt(document.getElementById('hitbox01').style.left) + speed + 'px'
-     myCheckHit()}     // checks for all collisions
+     myCheckHit()
+   }     // checks for all collisions
 }"><br><br>
 
 <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
    if(gameOver==false){
      document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + speed + 'px'
      document.getElementById('hitbox01').style.top = parseInt(document.getElementById('hitbox01').style.top) + speed + 'px'
-     myCheckHit()}     // checks for all collisions
+     myCheckHit()
+   }     // checks for all collisions
 }"><br><br>
 
 
