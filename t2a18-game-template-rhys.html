@@ -1,12 +1,17 @@
 
 
 
-<body id="myBody" style="background-repeat:repeat; background-size: 10%" background="Images/Backgrounds/BG.png" onload="theWorldRevolving()">
+<body id="myBody" style="background-repeat:repeat; background-size: 10%" background="Images/Backgrounds/BG.png" onload="setup()">
 
 <h1 align=center>t2a18-game-template-fred</h1>
 <br><br><br><br>
 
 <script>
+function setup(){
+   theWorldRevolving()
+   gameOver = false
+}
+   
 function theWorldRevolving(){
    clearInterval(myClock)
    let myTemp = '100px 0px'
@@ -37,7 +42,7 @@ function theWorldRevolving(){
    let myGlobalX = 0
    let myClock
    let hit = new sound('audio/hit.mp3')
-   let gameOver = false
+   let gameOver = true
    let speed = 10
    let speedB = -10
    
